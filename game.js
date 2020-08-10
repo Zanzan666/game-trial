@@ -81,7 +81,6 @@ function level_selector(){
           num.push(random_number);
       }
   }
-  alert(num)
   var string_to_append="";
   for (i = 0; i < row_num; i++) {
     string_to_append+='<div class="row">';
