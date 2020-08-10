@@ -1,29 +1,99 @@
 body {
   text-align: center;
-  background-color: #011F3F;
+  background-color: #d6b1c6;
 }
 
-#level-title {
+#countdown {
+  position: absolute;
+  margin: auto;
+  margin-top: 5rem;
+  margin-left: 5rem;
+  height: 3rem;
+  width: 3rem; 
+  visibility: visible;
+}
+
+
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+svg circle {
+  stroke-dasharray: 113px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke: white;
+  fill: none;
+}
+
+.run-animation {
+  animation: countdown 5s linear infinite forwards;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 113px;
+  }
+}
+
+#game_level-title {
   font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
+  font-size: 2rem;
   margin:  5%;
   color: #FEF2BF;
+}
+.h1{
+  height: 5vh;
 }
 
 .container {
   display: block;
   width: 50%;
+  height: 75vh;
   margin: auto;
 
 }
 
+.row {
+  height: 18%;
+  margin: 0;
+}
+
 .btn {
-  margin: 25px;
+  margin: 0.5%;
   display: inline-block;
-  height: 200px;
-  width: 200px;
-  border: 10px solid black;
+  height: 90%;
+  width: 20%;
+  border: 1% solid black;
   border-radius: 20%;
+  background-color: rgb(42, 69, 80);
+  color: white;
+}
+
+.text-tile{
+  font-size: 400%;
+  text-align: center;
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+.btn:hover {
+  background-color: rgb(63, 104, 121);
+}
+
+.btn:active {
+  background-color: rgb(63, 121, 85);
 }
 
 .game-over {
@@ -31,21 +101,6 @@ body {
   opacity: 0.8;
 }
 
-.red {
-  background-color: red;
-}
-
-.green {
-  background-color: green;
-}
-
-.blue {
-  background-color: blue;
-}
-
-.yellow {
-  background-color: yellow;
-}
 
 .pressed {
   box-shadow: 0 0 20px white;
