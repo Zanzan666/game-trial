@@ -3,30 +3,37 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Flip-the-Num-Card</title>
+  <title>Simon</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-  
 </head>
 
 <body>
-  <h1 id="game_level-title">Press A Key to Start</h1>
-  <div id="countdown">
-    <svg>
-      <circle r="18" cx="20" cy="20"></circle>
-    </svg>
-  </div>
+  <h1 id="level-title">Press A Key to Start</h1>
   <div class="container">
-    <div class="row">
-      <div type="button" class="btn"><div class="text-tile" >1</div></div>
-      <div type="button" class="btn"><div class="text-tile" >2</div></div>
+    <div lass="row">
+
+      <div type="button" id="green" class="btn green">
+
+      </div>
+
+      <div type="button" id="red" class="btn red">
+
+      </div>
     </div>
+
     <div class="row">
-      <div type="button" class="btn"><div class="text-tile" >3</div></div>
-      <div type="button" class="btn"><div class="text-tile" >4</div></div>
+
+      <div type="button" id="yellow" class="btn yellow">
+
+      </div>
+      <div type="button" id="blue" class="btn blue">
+
+      </div>
+
     </div>
+
   </div>
-  
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="game.js" charset="utf-8"></script>
